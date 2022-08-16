@@ -13,6 +13,9 @@ function App() {
   }
   useEffect(() => {
     window.name = "app-one"
+    // window.onbeforeunload = (e) => {
+    //   alert("Test")
+    // }
   }, [])
   return (
     <div className="App">
