@@ -6,12 +6,17 @@ import './App.css';
 function App() {
   const [hashTarget, setHashTarget] = useState('')
   const location = useLocation();
+  let support = false;
+  if ('launchQueue' in window && 'targetURL' in window.LaunchParams.prototype) {
+    // The Launch Handler API is supported.
+    support = true;
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          App ONE - {location.hash}
+          App ONE - {location.hash} - supported? {support}
         </p>
         <input type="text" value={hashTarget} onChange={(e) => setHashTarget(e.target.value)} />
         <a
