@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
@@ -11,6 +11,9 @@ function App() {
     // The Launch Handler API is supported.
     support = true;
   }
+  useEffect(() => {
+    window.name = "app-one"
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
