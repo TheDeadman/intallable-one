@@ -17,7 +17,7 @@ function App() {
         <a
           className="App-link"
           href={`https://test-installable-two.herokuapp.com/${hashTarget ? "#" + hashTarget : ''}`}
-          target="_blank"
+          target="app-two"
         >
           GO TO APP 2
         </a>
