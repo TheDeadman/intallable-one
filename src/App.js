@@ -16,7 +16,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          App ONE - {location.hash} - supported? {support}
+          App ONE - {location.hash} - supported? {`${support}`}
         </p>
         <input type="text" value={hashTarget} onChange={(e) => setHashTarget(e.target.value)} />
         <a
