@@ -65,3 +65,20 @@ registerRoute(
 );
 
 // Any other custom service worker logic can go here.
+self.addEventListener('fetch', (e) => {
+  if ((e.request.url.endsWith('/receive-shares')) &&
+    (e.request.method === 'GET')) {
+    console.log("testing", e)
+    return e.respondWith((async () => {
+      // This function is async.
+      const formData = await e.request.formData();
+      // Do something with the URL…
+      const url = formData.get('url');
+      // Store the URL, process it, communicate it to the clients…
+      // You need to redirect the user somewhere, since the path
+      // /receive-shares does not actually exist.
+      return Response.redirect('/', 303);
+    })())
+  }
+  /* Your regular fetch handler */
+})
