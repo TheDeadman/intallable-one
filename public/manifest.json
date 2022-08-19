@@ -24,15 +24,15 @@
   "background_color": "#ffffff",
   "protocol_handlers": [
     {
-      "protocol": "web+test-handler",
+      "protocol": "web+testHandler",
       "url": "/#%s"
     },
     {
-      "protocol": "web+test-handler-2",
+      "protocol": "web+testHandler2",
       "url": "#%s"
     },
     {
-      "protocol": "web+test-handler-3",
+      "protocol": "web+testHandler3",
       "url": "%s"
     }
   ]
