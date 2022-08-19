@@ -43,6 +43,8 @@ function App() {
         >
           GO TO APP 2 with /
         </a>
+        <a href="intent://test-installable-two.herokuapp.com#Intent;scheme=https;package=com.android.chrome;end">test intent</a>
+        <a href="intent://test-installable-two.herokuapp.com#Intent;scheme=https;action=android.intent.action.VIEW;end;">test intent 2</a>
       </header>
     </div>
   );
