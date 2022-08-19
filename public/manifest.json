@@ -24,12 +24,16 @@
   "background_color": "#ffffff",
   "protocol_handlers": [
     {
-      "protocol": "web+jngl",
-      "url": "/lookup?type=%s"
+      "protocol": "web+testhandler",
+      "url": "/#%s"
     },
     {
-      "protocol": "web+jnglstore",
-      "url": "/shop?for=%s"
+      "protocol": "web+testhandler2",
+      "url": "#%s"
+    },
+    {
+      "protocol": "web+testhandler3",
+      "url": "%s"
     }
   ]
 }
