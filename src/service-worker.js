@@ -70,10 +70,6 @@ self.addEventListener('fetch', (e) => {
     (e.request.method === 'GET')) {
     console.log("testing", e)
     return e.respondWith((async () => {
-      // This function is async.
-      const formData = await e.request.formData();
-      // Do something with the URL…
-      const url = formData.get('url');
       // Store the URL, process it, communicate it to the clients…
       // You need to redirect the user somewhere, since the path
       // /receive-shares does not actually exist.
