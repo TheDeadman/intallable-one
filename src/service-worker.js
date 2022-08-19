@@ -69,7 +69,8 @@ self.addEventListener('fetch', (e) => {
   if ((e.request.url.endsWith('/receive-shares')) &&
     (e.request.method === 'GET')) {
     console.log("testing", e)
-    return e.respondWith((async () => {
+    return e.respondWith((() => {
+      console.log("in the respond with?")
       // Store the URL, process it, communicate it to the clients…
       // You need to redirect the user somewhere, since the path
       // /receive-shares does not actually exist.
