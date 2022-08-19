@@ -21,5 +21,19 @@
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "protocol_handlers": [
+    {
+      "protocol": "test-handler",
+      "url": "/#%s"
+    },
+    {
+      "protocol": "test-handler-2",
+      "url": "#%s"
+    },
+    {
+      "protocol": "test-handler-3",
+      "url": "%s"
+    }
+  ]
 }
