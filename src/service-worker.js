@@ -66,6 +66,7 @@ registerRoute(
 
 // Any other custom service worker logic can go here.
 self.addEventListener('fetch', (e) => {
+  console.log("FETCHED?")
   if ((e.request.url.endsWith('/receive-shares')) &&
     (e.request.method === 'GET')) {
     console.log("testing", e)
