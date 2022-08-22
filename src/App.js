@@ -24,6 +24,29 @@ function App() {
     // window.onbeforeunload = (e) => {
     //   alert("Test")
     // }
+    navigation.addEventListener('navigate', navigateEvent => {
+      // Exit early if this navigation shouldn't be intercepted.
+      // The properties to look at are discussed later in the article.
+      navigateEvent.preventDefault();
+      console.log(navigateEvent)
+
+      // if (shouldNotIntercept(navigateEvent)) return;
+
+      // const url = new URL(navigateEvent.destination.url);
+
+      // if (url.pathname === '/') {
+      //   navigateEvent.intercept({handler: loadIndexPage});
+      // } else if (url.pathname === '/cats/') {
+      //   navigateEvent.intercept({handler: loadCatsPage});
+      // }
+    });
+
+    // window.addEventListener('beforeunload', (event) => {
+    //   // Cancel the event as stated by the standard.
+    //   event.preventDefault();
+    //   // Chrome requires returnValue to be set.
+    //   event.returnValue = '';
+    // });
   }, [])
   return (
     <div className="App">
