@@ -3,6 +3,13 @@ import { useLocation } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
+function getLink() {
+  if (window.location.hostname === "localhost") {
+    return "http://localhost:3000"
+  }
+  return "https://test-installable-two.herokuapp.com";
+}
+
 function App() {
   const [hashTarget, setHashTarget] = useState('')
   const [time, setTime] = useState(Date.now())
@@ -31,14 +38,14 @@ function App() {
         <input type="text" value={hashTarget} onChange={(e) => setHashTarget(e.target.value)} />
         <a
           className="App-link"
-          href={`https://test-installable-two.herokuapp.com${hashTarget ? "#" + hashTarget : ''}`}
+          href={`${getLink()}${hashTarget ? "#" + hashTarget : ''}`}
           target="app-two"
         >
           GO TO APP 2
         </a>
         <a
           className="App-link"
-          href={`https://test-installable-two.herokuapp.com/${hashTarget ? "#" + hashTarget : ''}`}
+          href={`${getLink()}/${hashTarget ? "#" + hashTarget : ''}`}
           target="app-two"
         >
           GO TO APP 2 with /
