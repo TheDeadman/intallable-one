@@ -24,7 +24,7 @@ function App() {
     // window.onbeforeunload = (e) => {
     //   alert("Test")
     // }
-    navigation.addEventListener('navigate', navigateEvent => {
+    window.navigation.addEventListener('navigate', navigateEvent => {
       // Exit early if this navigation shouldn't be intercepted.
       // The properties to look at are discussed later in the article.
       navigateEvent.preventDefault();
