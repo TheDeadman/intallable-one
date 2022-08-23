@@ -73,6 +73,10 @@ function App() {
         >
           GO TO APP 2 with /
         </a>
+
+        <button onClick={() => {
+          navigator.share({ text: "test", title: "Title", url: "http://web.dev" });
+        }}>Share</button>
         <a href={`intent://test-installable-two.herokuapp.com${hashTarget ? "#" + hashTarget : ''};scheme=https;package=org.chromium.webapk.ac3efa232bdbc71ef_v2;end`}>test intent</a>
         <a href={`intent://test-installable-two.herokuapp.com${hashTarget ? "#" + hashTarget : ''};scheme=https;action=android.intent.action.VIEW;end;`}>test intent 2</a>
         <a href={`intent://test-installable-two.herokuapp.com${hashTarget ? "#" + hashTarget : ''}#Intent;scheme=https;package=org.chromium.webapk.ac3efa232bdbc71ef_v2;end`}>test intent</a>
